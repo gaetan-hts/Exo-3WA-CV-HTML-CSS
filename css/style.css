@@ -1,0 +1,617 @@
+@import url("https://fonts.googleapis.com/css2?family=Protest+Strike&family=Roboto+Condensed&display=swap");
+@font-face {
+  font-family: "IBM-Plex-Mono";
+  src: url("../assets/fonts/IBMPlexMono-Medium.ttf");
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: url(../assets/img/bg.jpg) center/cover;
+}
+body .sphere-bg {
+  position: fixed;
+  z-index: -5;
+  top: 10%;
+  left: -100%;
+  height: 100vh;
+  transform: rotate(15deg);
+}
+@media only screen and (min-width: 500px) {
+  body .sphere-bg {
+    left: -75%;
+  }
+}
+@media only screen and (min-width: 750px) {
+  body .sphere-bg {
+    left: -55%;
+  }
+}
+@media only screen and (min-width: 900px) {
+  body .sphere-bg {
+    left: -20%;
+    height: 120vh;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  body .sphere-bg {
+    left: -10%;
+  }
+}
+body .to-top-btn {
+  position: fixed;
+  right: 5px;
+  bottom: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 7px;
+  width: 7px;
+  max-width: 150px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.212) 0%, rgb(255, 255, 255) 100%);
+  padding: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+  text-decoration: none;
+}
+body .to-top-btn i {
+  color: black;
+}
+body .to-top-btn:hover {
+  transform: translateY(-3px);
+}
+@media only screen and (min-width: 750px) {
+  body .to-top-btn {
+    height: 20px;
+    width: 20px;
+    right: 10px;
+    bottom: 10px;
+  }
+}
+body header {
+  font-family: "Roboto Condensed", helvetica;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  max-width: 800px;
+  width: 100%;
+  margin: 10px auto;
+}
+body header .top-header {
+  display: flex;
+  font-size: 3.5rem;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px;
+  position: relative;
+}
+body header .top-header i {
+  width: 2.5rem;
+  animation: bounce 1.5s infinite;
+  position: absolute;
+  top: 15px;
+  right: 38px;
+  cursor: pointer;
+  color: black;
+}
+@media only screen and (min-width: 600px) {
+  body header .top-header {
+    justify-content: center;
+  }
+}
+body header .bot-header {
+  font-size: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+  width: 100%;
+  margin-right: 10px;
+}
+body header .bot-header::before {
+  content: "";
+  transform: translateY(-50%);
+  height: 5px;
+  width: 25%;
+  background-color: black;
+}
+@media only screen and (min-width: 600px) {
+  body header .bot-header {
+    justify-content: center;
+  }
+}
+body header p {
+  margin: 10px;
+  max-width: 70%;
+}
+body .main-container {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+body .main-container .section1 {
+  background: rgba(255, 255, 255, 0.452);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 2px solid rgb(255, 255, 255);
+  margin: 10px;
+}
+body .main-container .section1 h1 {
+  font-family: "Roboto Condensed", helvetica;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  text-align: center;
+  margin: 10px;
+}
+@media only screen and (min-width: 500px) {
+  body .main-container .section1 h1 {
+    font-size: 1.4;
+  }
+}
+@media only screen and (min-width: 750px) {
+  body .main-container .section1 h1 {
+    font-size: 1.7rem;
+  }
+}
+body .main-container .section1 .hero-container {
+  display: flex;
+}
+body .main-container .section1 .hero-container .hero-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 10px;
+  width: 70%;
+}
+body .main-container .section1 .hero-container .hero-text-container p {
+  font-family: "IBM-Plex-Mono", Arial;
+  font-size: 0.7rem;
+  margin: 0 0 20px 0;
+}
+@media only screen and (min-width: 750px) {
+  body .main-container .section1 .hero-container .hero-text-container p {
+    font-size: 0.85rem;
+  }
+}
+body .main-container .section1 .hero-container .hero-text-container button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.7em 1.4em 0.7em 1.1em;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.212) 0%, rgb(255, 255, 255) 100%);
+  width: 70%;
+  border: none;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  letter-spacing: 0.05em;
+  height: 2em;
+  border-radius: 10px;
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+}
+body .main-container .section1 .hero-container .hero-text-container button:hover {
+  transform: translateY(-3px);
+}
+body .main-container .section1 .hero-container .hero-text-container button a {
+  text-decoration: none;
+  color: rgb(34, 34, 34);
+  font-size: 0.8em;
+  font-family: "IBM-Plex-Mono", Arial;
+  font-weight: 800;
+}
+body .main-container .section1 .hero-container .hero-img-container {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+body .main-container .section1 .hero-container .hero-img-container img {
+  height: 150px;
+  border-radius: 0 0 16px 0;
+}
+body .main-container .section2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  height: auto;
+  margin: 10px;
+}
+body .main-container .section2 .div1 {
+  grid-area: 1/1/5/2;
+  background: rgba(255, 255, 255, 0.452);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 2px solid rgb(255, 255, 255);
+  padding: 10px;
+}
+body .main-container .section2 .div2 {
+  grid-area: 1/2/4/3;
+  background: rgba(255, 255, 255, 0.452);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 2px solid rgb(255, 255, 255);
+  padding: 10px;
+}
+body .main-container .section2 .div3 {
+  grid-area: 4/2/5/3;
+  background: rgba(255, 255, 255, 0.452);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 2px solid rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+body .main-container .section2 .div3 ul {
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 1.8rem;
+}
+@media only screen and (min-width: 750px) {
+  body .main-container .section2 .div3 ul {
+    font-size: 2.2rem;
+    gap: 35px;
+  }
+}
+body .main-container .section2 .div3 ul i {
+  color: black;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+body .main-container .section2 .div3 ul i:hover {
+  transform: translateY(-4px);
+}
+body .main-container .section2 h2 {
+  font-family: "Roboto Condensed", helvetica;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  text-align: start;
+  margin: 0;
+  position: relative;
+}
+body .main-container .section2 h2::after {
+  content: "";
+  background-color: black;
+  position: absolute;
+  height: 4px;
+  width: 80%;
+  bottom: -5px;
+  right: -10px;
+}
+@media only screen and (min-width: 750px) {
+  body .main-container .section2 h2 {
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+  }
+}
+body .main-container .section2 ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  height: 80%;
+}
+body .main-container .section2 ul li {
+  width: 100%;
+}
+body .main-container .section2 ul li h3 {
+  font-family: "Roboto Condensed", helvetica;
+  font-size: 0.8rem;
+  margin: 0 0 3px 0;
+}
+@media only screen and (min-width: 750px) {
+  body .main-container .section2 ul li h3 {
+    font-size: 1.1rem;
+  }
+}
+body .main-container .section2 ul li p {
+  font-family: "IBM-Plex-Mono", Arial;
+  font-size: 0.75rem;
+  margin: 0 0 10px 8px;
+}
+@media only screen and (min-width: 750px) {
+  body .main-container .section2 ul li p {
+    font-size: 0.9rem;
+  }
+}
+body .main-container .section3 {
+  display: flex;
+  height: auto;
+  gap: 10px;
+  margin: 10px;
+  font-family: "IBM-Plex-Mono", Arial;
+}
+body .main-container .section3 h2 {
+  font-family: "Roboto Condensed", helvetica;
+  margin: 0 0 20px 0;
+  position: relative;
+}
+body .main-container .section3 h2::after {
+  content: "";
+  background-color: black;
+  position: absolute;
+  height: 4px;
+  width: 80%;
+  bottom: -5px;
+  right: -10px;
+}
+@media only screen and (min-width: 750px) {
+  body .main-container .section3 h2 {
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+  }
+}
+body .main-container .section3 .skills-side {
+  background: rgba(255, 255, 255, 0.452);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 2px solid rgb(255, 255, 255);
+  width: 35%;
+  padding: 10px;
+}
+body .main-container .section3 .skills-side .skills-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+body .main-container .section3 .skills-side .skills-container .skills {
+  font-size: 0.7rem;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.212) 0%, rgb(255, 255, 255) 100%);
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 8px;
+  text-align: center;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  margin-top: 5px;
+}
+@media only screen and (min-width: 750px) {
+  body .main-container .section3 .skills-side .skills-container .skills {
+    font-size: 0.9rem;
+    margin-top: 10px;
+  }
+}
+body .main-container .section3 .portfolio-side {
+  background: rgba(255, 255, 255, 0.452);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 2px solid rgb(255, 255, 255);
+  width: 65%;
+  padding: 10px;
+}
+body .main-container .section3 .portfolio-side .portfolio-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  transition: all 0.5s ease-in;
+}
+body .main-container .section3 .portfolio-side .portfolio-container .project {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 0 33%;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 8px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  min-height: 100px;
+  filter: brightness(1.2);
+  cursor: pointer;
+  color: transparent;
+  transition: all 0.5s ease;
+}
+body .main-container .section3 .portfolio-side .portfolio-container .project:hover {
+  color: white;
+}
+body .main-container .section3 .portfolio-side .portfolio-container .project1 {
+  background: url(../assets/img/confiotes.png) top/cover no-repeat;
+}
+body .main-container .section3 .portfolio-side .portfolio-container .project1:hover {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.99), rgba(54, 54, 54, 0.8) 39.24%, rgba(28, 28, 28, 0.7)), url(../assets/img/confiotes.png) bottom/cover no-repeat;
+}
+body .main-container .section3 .portfolio-side .portfolio-container .project2 {
+  background: url(../assets/img/crypto-dashboard.png) bottom/cover no-repeat;
+}
+body .main-container .section3 .portfolio-side .portfolio-container .project2:hover {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.99), rgba(54, 54, 54, 0.8) 39.24%, rgba(28, 28, 28, 0.7)), url(../assets/img/crypto-dashboard.png) top/cover;
+}
+body .main-container .section3 .portfolio-side .portfolio-container .project3 {
+  background: url(../assets/img/cindy-joseph.png) bottom/cover no-repeat;
+}
+body .main-container .section3 .portfolio-side .portfolio-container .project3:hover {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.99), rgba(54, 54, 54, 0.8) 39.24%, rgba(28, 28, 28, 0.7)), url(../assets/img/cindy-joseph.png) top/cover;
+}
+body .main-container .section3 .portfolio-side .portfolio-container .project4 {
+  background: url(../assets/img/vetovolant.png) center/cover no-repeat;
+}
+body .main-container .section3 .portfolio-side .portfolio-container .project4:hover {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.99), rgba(54, 54, 54, 0.8) 39.24%, rgba(28, 28, 28, 0.7)), url(../assets/img/vetovolant.png) top/cover;
+}
+body .main-container .form-container {
+  background: rgba(255, 255, 255, 0.452);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 2px solid rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 10px;
+}
+body .main-container .form-container h2 {
+  font-family: "Roboto Condensed", helvetica;
+  margin: 10px 0;
+  position: relative;
+}
+body .main-container .form-container h2::after {
+  content: "";
+  background-color: black;
+  position: absolute;
+  height: 4px;
+  width: 80%;
+  bottom: -5px;
+  right: -10px;
+}
+@media only screen and (min-width: 750px) {
+  body .main-container .form-container h2 {
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+  }
+}
+body .main-container .form-container form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 80%;
+  max-width: 700px;
+}
+body .main-container .form-container form label {
+  width: 100%;
+  max-width: 500px;
+  text-align: start;
+  font-family: "IBM-Plex-Mono", Arial;
+  margin: 10px 0 2px 0;
+  font-size: 1.2rem;
+}
+body .main-container .form-container form input {
+  width: 100%;
+  max-width: 500px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.212) 0%, rgb(255, 255, 255) 100%);
+  padding: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+body .main-container .form-container form input::-moz-placeholder {
+  text-align: start;
+}
+body .main-container .form-container form input::placeholder {
+  text-align: start;
+}
+body .main-container .form-container form textarea {
+  width: 100%;
+  max-width: 500px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.212) 0%, rgb(255, 255, 255) 100%);
+  resize: none;
+  padding: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+body .main-container .form-container form textarea::-moz-placeholder {
+  text-align: start;
+}
+body .main-container .form-container form textarea::placeholder {
+  text-align: start;
+}
+body .main-container .form-container form input:focus,
+body .main-container .form-container form textarea:focus {
+  outline: none;
+  background-color: #f0f0f0;
+  transition: background-color 0.3s ease;
+}
+body .main-container .form-container button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 30px;
+  font-family: "IBM-Plex-Mono", Arial;
+  max-width: 150px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.212) 0%, rgb(255, 255, 255) 100%);
+  padding: 10px;
+  margin: 20px 0;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+body .main-container .form-container button:hover {
+  transform: translateY(-3px);
+}
+body footer {
+  background: rgba(255, 255, 255, 0.452);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-top: 2px solid rgb(255, 255, 255);
+  font-family: "IBM-Plex-Mono", Arial;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body footer .footer-container {
+  padding: 10px 0 10px 0;
+  display: flex;
+  justify-content: center;
+  font-size: 0.75rem;
+}
+@media only screen and (min-width: 750px) {
+  body footer .footer-container {
+    font-size: 1rem;
+  }
+}
+body footer .footer-container .left-side {
+  position: relative;
+  text-align: left;
+}
+body footer .footer-container .left-side::before {
+  content: "";
+  position: absolute;
+  height: 110%;
+  width: 4px;
+  background: black;
+  left: -15px;
+}
+body footer .footer-container .right-side {
+  text-align: right;
+}
+body footer .legals {
+  font-size: 0.5rem;
+}
+body footer .legals a {
+  cursor: pointer;
+  color: black;
+}/*# sourceMappingURL=style.css.map */
